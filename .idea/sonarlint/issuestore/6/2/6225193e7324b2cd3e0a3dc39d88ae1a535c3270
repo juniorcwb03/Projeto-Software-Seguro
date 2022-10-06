@@ -1,0 +1,13 @@
+
+i	java:S116"TRename this field "con_banco" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•¯¾Í
+m	java:S116	"XRename this field "usuario_mysql" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û¿Ã¸
+k	java:S116
+"VRename this field "senha_mysql" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ¹í·
+;
+java:S3010"%Remove this assignment of "instance".(¼®‚®
+Z
+java:S2147"DCombine this catch with the one at line 25, which has the same body.(À‹ø„
+_
+java:S2147"DCombine this catch with the one at line 25, which has the same body.(±Ÿ—±ÿÿÿÿÿ
+B
+java:S1068",Remove this unused "instance" private field.(óéš×
