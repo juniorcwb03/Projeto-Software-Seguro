@@ -2,11 +2,13 @@ package controller;
 
 import dao.AutenticacaoDAO;
 import model.Conveniado;
+import model.Medico;
 import view.AutenticacaoView;
 
 public class AutenticacaoController {
     // Variáveis
     private Conveniado conveniado;
+    private Medico medico;
     private AutenticacaoView autenticacaoView;
     private AutenticacaoDAO autenticacaoDAO;
 
@@ -21,11 +23,18 @@ public class AutenticacaoController {
         else {
             autenticacaoView.conveniadoNaoAutenticado();
         }
-        // Lembrete: Restante do código
     }
 
     // Método para autenticar um usuário Médico
     public void autenticarMedico() {
+        medico = autenticacaoView.loginMedico(new Medico());
+        autenticacaoDAO = new AutenticacaoDAO();
 
+        if (autenticacaoDAO.autenticarMedico(medico)) {
+            autenticacaoView.medicoAutenticado();
+        }
+        else {
+            autenticacaoView.medicoNaoAutenticado();
+        }
     }
 }

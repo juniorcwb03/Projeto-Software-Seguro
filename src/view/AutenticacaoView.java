@@ -1,6 +1,7 @@
 package view;
 
 import model.Conveniado;
+import model.Medico;
 
 import java.util.Scanner;
 
@@ -32,5 +33,22 @@ public class AutenticacaoView {
     // Mostrar que o usuário Conveniado não foi autenticado
     public void conveniadoNaoAutenticado() {
         System.out.println("Falha na autenticação!\nTente novamente!");
+    }
+
+    public Medico loginMedico(Medico medico) {
+        System.out.println("Digite o CPF (Ex: xxx.xxx.xxx-xx):");
+        medico.setCpf(sc.nextLine());
+        System.out.println("Digite sua SENHA:");
+        medico.setSenha(sc.nextLine());
+
+        return medico;
+    }
+
+    public void medicoAutenticado() {
+        System.out.println("Sucesso na autenticação como Médico no sistema!");
+    }
+
+    public void medicoNaoAutenticado() {
+        System.out.println("Falha na autenticação no sistema\nTente novamente!");
     }
 }

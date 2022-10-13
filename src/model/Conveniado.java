@@ -2,12 +2,15 @@ package model;
 
 public class Conveniado {
     // Variáveis
-    private String nomeCompleto,
-            cpf,
-            senha,
-            enderecoConveniado;
-    private Float cep,
-            numDeTelefone;
+    private String nomeCompleto;
+    private String cpf;
+    private String senha;
+
+    private String enderecoConveniado;
+    private String ruaDaCasa;
+    private Float numDaCasa;
+    private Float cep;
+    private Float numDeTelefone;
 
     // Métodos de Get e Set da classe
     public String getNomeCompleto() {
@@ -34,6 +37,30 @@ public class Conveniado {
         this.senha = senha;
     }
 
+    public String getEnderecoConveniado() {
+        return enderecoConveniado;
+    }
+
+    public void setEnderecoConveniado(String enderecoConveniado) {
+        this.enderecoConveniado = enderecoConveniado;
+    }
+
+    public String getRuaDaCasa() {
+        return ruaDaCasa;
+    }
+
+    public void setRuaDaCasa(String ruaDaCasa) {
+        this.ruaDaCasa = ruaDaCasa;
+    }
+
+    public Float getNumDaCasa() {
+        return numDaCasa;
+    }
+
+    public void setNumDaCasa(Float numDaCasa) {
+        this.numDaCasa = numDaCasa;
+    }
+
     public Float getCep() {
         return cep;
     }
@@ -48,13 +75,5 @@ public class Conveniado {
 
     public void setNumDeTelefone(Float numDeTelefone) {
         this.numDeTelefone = numDeTelefone;
-    }
-
-    public String getEnderecoConveniado() {
-        return enderecoConveniado;
-    }
-
-    public void setEnderecoConveniado(String enderecoConveniado) {
-        this.enderecoConveniado = enderecoConveniado;
     }
 }

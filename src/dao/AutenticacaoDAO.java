@@ -22,7 +22,6 @@ public class AutenticacaoDAO {
 
     // Método para autenticar conveniado
     public Boolean autenticarConveniado (Conveniado conveniado){
-
         try{
             String query;
             query = "SELECT * FROM table_conveniado WHERE cpf=? AND senha=?";
@@ -42,7 +41,6 @@ public class AutenticacaoDAO {
     }
 
     public Boolean autenticarMedico (Medico medico) {
-
         try {
             String query;
             query = "SELECT * FROM table_registro_medico WHERE cpf=? AND senha=?";
@@ -57,6 +55,7 @@ public class AutenticacaoDAO {
             JOptionPane.showMessageDialog(null, ex.getMessage());
             ex.printStackTrace();
         }
+
         return false;
     }
 }
