@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e7cfd564-5961-4661-9f26-10f010e8c9ec" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Projeto-Software-Seguro.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/CadastroController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dao/CadastroDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/CadastroView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config-files/hospitaldb_model.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/../config-files/hospitaldb_model.mwb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config-files/hospitaldb_model.mwb.bak" beforeDir="false" afterPath="$PROJECT_DIR$/../config-files/hospitaldb_model.mwb.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/AutenticacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controller/AutenticacaoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dao/AutenticacaoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/AutenticacaoDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Conveniado.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/Conveniado.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Medico.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/Medico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Usuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/AutenticacaoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/AutenticacaoView.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2G2NsHoJC79kHrMGSiWnbEdKYod" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Henrique/Desktop/Programas/Software-Seguro-Teste",
+    "settings.editor.selected.configurable": "discord-application"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e7cfd564-5961-4661-9f26-10f010e8c9ec" name="Changes" comment="" />
+      <created>1665582923674</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1665582923674</updated>
+      <workItem from="1665582925006" duration="2204000" />
+      <workItem from="1665611122333" duration="1934000" />
+      <workItem from="1665615146797" duration="1887000" />
+      <workItem from="1665670969592" duration="8497000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
