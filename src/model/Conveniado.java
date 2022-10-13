@@ -6,7 +6,6 @@ public class Conveniado {
     private String cpf;
     private String senha;
 
-    private String enderecoConveniado;
     private String ruaDaCasa;
     private Float numDaCasa;
     private Float cep;

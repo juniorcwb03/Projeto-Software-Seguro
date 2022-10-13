@@ -25,6 +25,8 @@ public class CadastroController {
 
         conveniado = cadastroView.cadastroConveniadoEndereco(new Conveniado());
         cadastroDAO.cadastrarEnderecoConveniado(conveniado);
+        // AVISO: AINDA FALTA VALIDAR SE O CADASTRO FOI FEITO COM SUCESSO OU NÃO
+        // AVISO: AINDA FALTA VALIDAR SE O CADASTRO FOI FEITO COM SUCESSO OU NÃO
     }
 
     public void cadastrarMedico() {
@@ -40,5 +42,7 @@ public class CadastroController {
 
         medico = cadastroView.cadastroMedicoEndereco(new Medico());
         cadastroDAO.cadastrarEnderecoMedico(medico);
+        // AVISO: AINDA FALTA VALIDAR SE O CADASTRO FOI FEITO COM SUCESSO OU NÃO
+        // AVISO: AINDA FALTA VALIDAR SE O CADASTRO FOI FEITO COM SUCESSO OU NÃO
     }
 }
