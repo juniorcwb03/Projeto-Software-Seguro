@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7cfd564-5961-4661-9f26-10f010e8c9ec" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/AutenticacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controller/AutenticacaoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/CadastroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CadastroController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/CadastroDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/CadastroDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/ConexaoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/ConexaoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/AutenticacaoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/AutenticacaoView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/CadastroView.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/CadastroView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +60,7 @@
       <workItem from="1665582925006" duration="2204000" />
       <workItem from="1665611122333" duration="1934000" />
       <workItem from="1665615146797" duration="1887000" />
-      <workItem from="1665670969592" duration="14879000" />
+      <workItem from="1665670969592" duration="15640000" />
     </task>
     <servers />
   </component>

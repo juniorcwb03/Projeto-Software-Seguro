@@ -28,6 +28,17 @@ public class CadastroController {
     }
 
     public void cadastrarMedico() {
+        cadastroDAO = new CadastroDAO();
 
+        medico = cadastroView.cadastroMedico(new Medico());
+        cadastroDAO.cadastrarMedico(medico);
+
+        for (int i = 0; i < cadastroView.qtdDeTelefones(); i++) {
+            medico = cadastroView.cadastroMedicoTelefone(new Medico());
+            cadastroDAO.cadastrarTelefoneMedico(medico);
+        }
+
+        medico = cadastroView.cadastroMedicoEndereco(new Medico());
+        cadastroDAO.cadastrarEnderecoMedico(medico);
     }
 }

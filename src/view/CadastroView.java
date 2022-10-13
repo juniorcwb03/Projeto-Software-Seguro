@@ -69,7 +69,21 @@ public class CadastroView {
     }
 
     public Medico cadastroMedicoTelefone(Medico medico) {
+        System.out.println("Digite o número do telefone (Apenas números):");
+        medico.setNumDeTelefone(sc.nextFloat());
 
+        return medico;
+    }
+
+    public Medico cadastroMedicoEndereco(Medico medico) {
+        System.out.println("Digite o CEP (Apenas números):");
+        medico.setCep(sc.nextFloat());
+        System.out.println("Digite a RUA:");
+        medico.setRuaDaCasa(sc.nextLine());
+        System.out.println("Digite o NÚMERO DA CASA:");
+        medico.setNumDaCasa(sc.nextFloat());
+
+        return medico;
     }
 
     // Mostrar que o usuário Médico foi cadastrado
