@@ -23,7 +23,6 @@ public class CadastroView {
         System.out.println("Digite a SENHA:");
         conveniado.setSenha(sc.nextLine());
 
-
         return conveniado;
     }
 
@@ -98,6 +97,7 @@ public class CadastroView {
 
     public int qtdDeTelefones() {
         System.out.println("Quantos telefones deseja cadastrar (0 para nenhum):");
+
         return sc.nextInt();
     }
 }

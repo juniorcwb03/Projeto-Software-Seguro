@@ -6,8 +6,7 @@ public class Medico {
     private String cpf;
     private String senha;
     private String areaAtuante;
-
-    private String enderecoMedico;
+    
     private String ruaDaCasa;
     private Float numDaCasa;
     private Float cep;
@@ -44,14 +43,6 @@ public class Medico {
 
     public void setSenha(String senha) {
         this.senha = senha;
-    }
-
-    public String getEnderecoMedico() {
-        return enderecoMedico;
-    }
-
-    public void setEnderecoMedico(String enderecoMedico) {
-        this.enderecoMedico = enderecoMedico;
     }
 
     public String getRuaDaCasa() {

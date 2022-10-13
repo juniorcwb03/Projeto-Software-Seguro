@@ -37,14 +37,6 @@ public class Conveniado {
         this.senha = senha;
     }
 
-    public String getEnderecoConveniado() {
-        return enderecoConveniado;
-    }
-
-    public void setEnderecoConveniado(String enderecoConveniado) {
-        this.enderecoConveniado = enderecoConveniado;
-    }
-
     public String getRuaDaCasa() {
         return ruaDaCasa;
     }
