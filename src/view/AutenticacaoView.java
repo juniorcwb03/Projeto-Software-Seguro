@@ -15,8 +15,8 @@ public class AutenticacaoView {
         this.sc = new Scanner(System.in);
     }
 
-    // Método para login do usuário Conveniado, requer CPF, NOME COMPLETO e SENHA.
-    public Conveniado login(Conveniado conveniado) {
+    // Método para login do usuário Conveniado, requer CPF e SENHA.
+    public Conveniado loginConveniado(Conveniado conveniado) {
         System.out.println("Digite o CPF (Ex: xxx.xxx.xxx-xx):");
         conveniado.setCpf(sc.nextLine());
         System.out.println("Digite sua SENHA:");
@@ -35,6 +35,7 @@ public class AutenticacaoView {
         System.out.println("Falha na autenticação!\nTente novamente!");
     }
 
+    // Método para login de um usuário médico, requer CPF e SENHA.
     public Medico loginMedico(Medico medico) {
         System.out.println("Digite o CPF (Ex: xxx.xxx.xxx-xx):");
         medico.setCpf(sc.nextLine());
@@ -44,10 +45,12 @@ public class AutenticacaoView {
         return medico;
     }
 
+    // Mostrar que o usuário Médico foi autenticado
     public void medicoAutenticado() {
         System.out.println("Sucesso na autenticação como Médico no sistema!");
     }
 
+    // Mostrar que o usuário Médico não foi autenticado
     public void medicoNaoAutenticado() {
         System.out.println("Falha na autenticação no sistema\nTente novamente!");
     }

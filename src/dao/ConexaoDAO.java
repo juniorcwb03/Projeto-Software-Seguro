@@ -16,10 +16,10 @@ public class ConexaoDAO {
     // Método construtor da classe
     public ConexaoDAO() {
         // hospitaldb é o nome do banco de dados no MySql
-        // deve ser criado com o usuário "root" e senha "root"
-        this.con_banco = "jdbc:mysql://localhost:3307/hospitaldb?useSSL=false";
+        // deve ser criado com o usuário "root" e senha "013710"
+        this.con_banco = "jdbc:mysql://localhost:3306/mydb?useSSL=false";
         this.usuario_mysql = "root";
-        this.senha_mysql = "root";
+        this.senha_mysql = "013710";
         instance = null;
 
         try {

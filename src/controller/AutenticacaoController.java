@@ -14,7 +14,7 @@ public class AutenticacaoController {
 
     // Método para autenticar um usuário Conveniado
     public void autenticarConveniado() {
-        conveniado = autenticacaoView.login(new Conveniado());
+        conveniado = autenticacaoView.loginConveniado(new Conveniado());
         autenticacaoDAO = new AutenticacaoDAO();
 
         if(autenticacaoDAO.autenticarConveniado(conveniado)){

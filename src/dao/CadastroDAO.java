@@ -41,10 +41,10 @@ public class CadastroDAO {
     }
 
     // Método para cadastrar um telefone de um conveniado
-    Boolean cadastrarTelefoneConveniado(Conveniado conveniado) {
+    public Boolean cadastrarTelefoneConveniado(Conveniado conveniado) {
         try {
             String query;
-            query = "INSERT INTO telefone_conveniado (telefone) VALUE (?)";
+            query = "INSERT INTO telefone_conveniado (telefone) VALUES (?)";
             ps = conn.getConexao().prepareStatement(query);
             ps.setFloat(1, conveniado.getNumDeTelefone());
             this.rs = ps.executeQuery();
@@ -59,7 +59,7 @@ public class CadastroDAO {
     }
 
     // Método para cadastrar um endereço de um conveniado
-    Boolean cadastrarEnderecoConveniado(Conveniado conveniado) {
+    public Boolean cadastrarEnderecoConveniado(Conveniado conveniado) {
         try {
             String query;
             query = "INSERT INTO endereco_conveniado(cep, rua, numero) VALUES (?, ?, ?)";
