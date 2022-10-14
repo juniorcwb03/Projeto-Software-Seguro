@@ -10,6 +10,7 @@ public class InicializacaoController {
     InicializacaoView inicializacaoView = new InicializacaoView();
     CadastrarConveniadoController cadastrarConveniadoController = new CadastrarConveniadoController();
     CadastroView cadastroView = new CadastroView();
+    Conveniado conveniado = new Conveniado();
     CadastroDAO cadastroDAO = new CadastroDAO();
 
     public InicializacaoController() {
@@ -17,9 +18,11 @@ public class InicializacaoController {
             case 0:
                 switch (inicializacaoView.opcaoDoUsuario()) {
                     case 0:
-                        cadastrarConveniadoController.CadastrarConveniado(cadastroView.cadastroConveniado());
-                        cadastrarConveniadoController.CadastrarConveniado(cadastroView.cadastroConveniadoTelefone());
+                        conveniado = cadastrarConveniadoController.CadastrarConveniado(cadastroView.cadastroConveniado());
+                        conveniado = cadastrarConveniadoController.CadastrarConveniado(cadastroView.cadastroConveniadoTelefone());
                         cadastrarConveniadoController.CadastrarConveniado(cadastroView.cadastroConveniadoEndereco());
+                        cadastroDAO.cadastrarConveniado(conveniado);
+
                 }
         }
     }

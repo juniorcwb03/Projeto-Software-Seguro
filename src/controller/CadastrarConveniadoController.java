@@ -10,7 +10,7 @@ public class CadastrarConveniadoController {
     private CadastroView cadastroView = new CadastroView();
     private CadastroDAO cadastroDAO = new CadastroDAO();
 
-    public void CadastrarConveniado(Conveniado conveniado) {
+    public Conveniado CadastrarConveniado(Conveniado conveniado) {
         cadastroDAO = new CadastroDAO();
 
         this.conveniado = cadastroView.cadastroConveniado();
@@ -23,6 +23,8 @@ public class CadastrarConveniadoController {
 
         this.conveniado = cadastroView.cadastroConveniadoEndereco();
         cadastroDAO.cadastrarEnderecoConveniado(this.conveniado);
+
+        return conveniado;
         // AVISO: AINDA FALTA VALIDAR SE O CADASTRO FOI FEITO COM SUCESSO OU NÃO
         // AVISO: AINDA FALTA VALIDAR SE O CADASTRO FOI FEITO COM SUCESSO OU NÃO
     }
