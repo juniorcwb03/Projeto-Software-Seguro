@@ -7,15 +7,11 @@ import java.util.Scanner;
 
 public class CadastroView {
     // Variáveis
-    Scanner sc;
+    Scanner sc = new Scanner(System.in);
+    Conveniado conveniado = new Conveniado();
+    Medico medico = new Medico();
 
-    // Método Construtor da Classe
-    public CadastroView(Scanner sc) {
-        this.sc = sc;
-        this.sc = new Scanner(System.in);
-    }
-
-    public Conveniado cadastroConveniado(Conveniado conveniado) {
+    public Conveniado cadastroConveniado() {
         System.out.println("Digite o CPF (Ex: xxx.xxx.xxx-xx):");
         conveniado.setCpf(sc.nextLine());
         System.out.println("Digite seu NOME COMPLETO:");
@@ -26,14 +22,14 @@ public class CadastroView {
         return conveniado;
     }
 
-    public Conveniado cadastroConveniadoTelefone(Conveniado conveniado) {
+    public Conveniado cadastroConveniadoTelefone() {
         System.out.println("Digite o número do telefone (Apenas números):");
         conveniado.setNumDeTelefone(sc.nextFloat());
 
         return conveniado;
     }
 
-    public Conveniado cadastroConveniadoEndereco(Conveniado conveniado) {
+    public Conveniado cadastroConveniadoEndereco() {
         System.out.println("Digite o CEP (Apenas números):");
         conveniado.setCep(sc.nextFloat());
         System.out.println("Digite a RUA:");
@@ -54,7 +50,7 @@ public class CadastroView {
         System.out.println("Falha no cadastro!\nTente novamente!");
     }
 
-    public Medico cadastroMedico(Medico medico) {
+    public Medico cadastroMedico() {
         System.out.println("Digite o CPF (Ex: xxx.xxx.xxx-xx):");
         medico.setCpf(sc.nextLine());
         System.out.println("Digite seu NOME COMPLETO:");
@@ -67,14 +63,14 @@ public class CadastroView {
         return medico;
     }
 
-    public Medico cadastroMedicoTelefone(Medico medico) {
+    public Medico cadastroMedicoTelefone() {
         System.out.println("Digite o número do telefone (Apenas números):");
         medico.setNumDeTelefone(sc.nextFloat());
 
         return medico;
     }
 
-    public Medico cadastroMedicoEndereco(Medico medico) {
+    public Medico cadastroMedicoEndereco() {
         System.out.println("Digite o CEP (Apenas números):");
         medico.setCep(sc.nextFloat());
         System.out.println("Digite a RUA:");

@@ -30,6 +30,7 @@ public class CadastroDAO {
             ps.setString(3, conveniado.getSenha());
             this.rs = ps.executeQuery();
 
+            System.out.println("Chefou aqui!");
             return rs.next();
         }
         catch(SQLException ex) {

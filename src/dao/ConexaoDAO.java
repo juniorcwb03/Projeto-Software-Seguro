@@ -19,7 +19,7 @@ public class ConexaoDAO {
         // deve ser criado com o usuário "root" e senha "013710"
         this.con_banco = "jdbc:mysql://localhost:3306/mydb?useSSL=false";
         this.usuario_mysql = "root";
-        this.senha_mysql = "013710";
+        this.senha_mysql = "PUC@1234";
         instance = null;
 
         try {

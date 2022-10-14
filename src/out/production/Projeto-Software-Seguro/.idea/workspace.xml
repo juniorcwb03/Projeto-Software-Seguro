@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e7cfd564-5961-4661-9f26-10f010e8c9ec" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/CadastrarConveniadoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/CadastrarMedicoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controller/CadastroMedicoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto-Software-Seguro.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto-Software-Seguro.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/CadastroController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/CadastroController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CadastroConveniadoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/InicializacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controller/InicializacaoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dao/CadastroDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/CadastroDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dao/ConexaoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/ConexaoDAO.java" afterDir="false" />
