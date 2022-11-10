@@ -6,18 +6,16 @@ import model.Medico;
 import view.AutenticacaoView;
 
 public class AutenticacaoController {
-    // Variáveis
-    private Conveniado conveniado;
-    private Medico medico;
-    private AutenticacaoView autenticacaoView;
+    private final AutenticacaoView autenticacaoView = new AutenticacaoView();
     private AutenticacaoDAO autenticacaoDAO;
 
     // Método para autenticar um usuário Conveniado
     public void autenticarConveniado() {
-        conveniado = autenticacaoView.loginConveniado(new Conveniado());
+        // Variáveis
+        Conveniado conveniado = autenticacaoView.loginConveniado(new Conveniado());
         autenticacaoDAO = new AutenticacaoDAO();
 
-        if(autenticacaoDAO.autenticarConveniado(conveniado)){
+        if(Boolean.TRUE.equals(autenticacaoDAO.autenticarConveniado(conveniado))){
             autenticacaoView.conveniadoAutenticado();
         }
         else {
@@ -27,10 +25,10 @@ public class AutenticacaoController {
 
     // Método para autenticar um usuário Médico
     public void autenticarMedico() {
-        medico = autenticacaoView.loginMedico(new Medico());
+        Medico medico = autenticacaoView.loginMedico(new Medico());
         autenticacaoDAO = new AutenticacaoDAO();
 
-        if (autenticacaoDAO.autenticarMedico(medico)) {
+        if (Boolean.TRUE.equals(autenticacaoDAO.autenticarMedico(medico))) {
             autenticacaoView.medicoAutenticado();
         }
         else {

@@ -12,7 +12,7 @@ public class CadastroView {
     Medico medico = new Medico();
 
     public Conveniado cadastroConveniado() {
-        System.out.println("Digite o CPF (Ex: xxx.xxx.xxx-xx):");
+        System.out.println("Digite o CPF apenas números (Ex: 499xxxxxx85):");
         conveniado.setCpf(sc.nextLine());
         System.out.println("Digite seu NOME COMPLETO:");
         conveniado.setNomeCompleto(sc.nextLine());
@@ -51,7 +51,7 @@ public class CadastroView {
     }
 
     public Medico cadastroMedico() {
-        System.out.println("Digite o CPF (Ex: xxx.xxx.xxx-xx):");
+        System.out.println("Digite o CPF apenas números (Ex: 499xxxxxx85):");
         medico.setCpf(sc.nextLine());
         System.out.println("Digite seu NOME COMPLETO:");
         medico.setNomeCompleto(sc.nextLine());
@@ -95,5 +95,9 @@ public class CadastroView {
         System.out.println("Quantos telefones deseja cadastrar (0 para nenhum):");
 
         return sc.nextInt();
+    }
+
+    public void opcaoInvalida() {
+        System.out.println("Opção inválida, tente novamente!");
     }
 }

@@ -7,13 +7,7 @@ import java.util.Scanner;
 
 public class AutenticacaoView {
     // Variáveis
-    Scanner sc;
-
-    // Método Construtor da Classe
-    public AutenticacaoView(Scanner sc) {
-        this.sc = sc;
-        this.sc = new Scanner(System.in);
-    }
+    Scanner sc = new Scanner(System.in);
 
     // Método para login do usuário Conveniado, requer CPF e SENHA.
     public Conveniado loginConveniado(Conveniado conveniado) {

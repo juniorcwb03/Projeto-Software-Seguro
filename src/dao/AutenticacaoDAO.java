@@ -7,7 +7,6 @@ import javax.swing.*;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.MessageFormat;
 
 public class AutenticacaoDAO {
     // Variáveis
