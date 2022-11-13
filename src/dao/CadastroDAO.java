@@ -10,7 +10,7 @@ public class CadastroDAO {
     // Variáveis
     private final ConexaoDAO conn;
     private boolean rsBoolean;
-    PreparedStatement ps;
+    private PreparedStatement ps;
 
     // Método construtor da classe
     public CadastroDAO(){
@@ -42,7 +42,7 @@ public class CadastroDAO {
     public Boolean cadastrarTelefoneConveniado(Conveniado conveniado) {
         try {
             String query;
-            query = "INSERT INTO telefone (telefone) VALUE (?)";
+            query = "INSERT INTO telefone(telefone) VALUE (?)";
             ps = conn.getConexao().prepareStatement(query);
             ps.setFloat(1, conveniado.getNumDeTelefone());
             this.rsBoolean = ps.execute();
@@ -60,7 +60,7 @@ public class CadastroDAO {
     public Boolean cadastrarEnderecoConveniado(Conveniado conveniado) {
         try {
             String query;
-            query = "INSERT INTO endereco(cep, rua, numero) VALUES (?, ?, ?)";
+            query = "INSERT INTO endereco (cep, rua, numero) VALUES (?, ?, ?)";
             ps = conn.getConexao().prepareStatement(query);
             ps.setFloat(1, conveniado.getCep());
             ps.setString(2, conveniado.getRuaDaCasa());
@@ -85,18 +85,6 @@ public class CadastroDAO {
             ps.setString(2, medico.getNomeCompleto());
             ps.setString(3, medico.getAreaAtuante());
             ps.setString(4, medico.getSenha());
-            this.rsBoolean = ps.execute();
-
-            query = "INSERT INTO telefone_medico (telefone) VALUE (?)";
-            ps = conn.getConexao().prepareStatement(query);
-            ps.setFloat(1, medico.getNumDeTelefone());
-            this.rsBoolean = ps.execute();
-
-            query = "INSERT INTO endereco_medico(cep, rua, numero) VALUES (?, ?, ?)";
-            ps = conn.getConexao().prepareStatement(query);
-            ps.setFloat(1, medico.getCep());
-            ps.setString(2, medico.getRuaDaCasa());
-            ps.setFloat(3, medico.getNumDaCasa());
             this.rsBoolean = ps.execute();
 
             return rsBoolean;
@@ -128,7 +116,7 @@ public class CadastroDAO {
     public Boolean cadastrarEnderecoMedico(Medico medico) {
         try {
             String query;
-            query = "INSERT INTO endereco(cep, rua, numero) VALUES (?, ?, ?)";
+            query = "INSERT INTO endereco (cep, rua, numero) VALUES (?, ?, ?)";
             ps = conn.getConexao().prepareStatement(query);
             ps.setFloat(1, medico.getCep());
             ps.setString(2, medico.getRuaDaCasa());

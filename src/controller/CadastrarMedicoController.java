@@ -7,21 +7,28 @@ import view.CadastroView;
 public class CadastrarMedicoController {
     // Variáveis
     private final CadastroView cadastroView = new CadastroView();
+    private final CadastroDAO cadastroDAO = new CadastroDAO();
 
-    public void cadastrarMedico(Medico medico) {
-        CadastroDAO cadastroDAO = new CadastroDAO();
+    public boolean cadastrarMedico(Medico medico) {
 
-        cadastroDAO.cadastrarMedico(medico);
+        return cadastroDAO.cadastrarMedico(medico);
+    }
 
-        for (int i = 0; i < cadastroView.qtdDeTelefones(); i++) {
-            medico = cadastroView.cadastroMedicoTelefone();
-            cadastroDAO.cadastrarTelefoneMedico(medico);
+    public boolean cadastrarTelefone() {
+        int qtdDeTelefones;
+        boolean rs = false;
+        qtdDeTelefones = cadastroView.qtdDeTelefones();
+        for (int i = 0; i < qtdDeTelefones; i++) {
+            Medico medico = cadastroView.cadastroMedicoTelefone();
+            rs = cadastroDAO.cadastrarTelefoneMedico(medico);
         }
 
-        medico = cadastroView.cadastroMedicoEndereco();
-        cadastroDAO.cadastrarEnderecoMedico(medico);
+        return rs;
+    }
 
-        // AVISO: AINDA FALTA VALIDAR SE O CADASTRO FOI FEITO COM SUCESSO OU NÃO
-        // AVISO: AINDA FALTA VALIDAR SE O CADASTRO FOI FEITO COM SUCESSO OU NÃO
+    public boolean cadastrarEndereco() {
+        Medico medico = cadastroView.cadastroMedicoEndereco();
+
+        return cadastroDAO.cadastrarEnderecoMedico(medico);
     }
 }

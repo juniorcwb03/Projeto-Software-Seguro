@@ -12,7 +12,7 @@ public class AutenticacaoDAO {
     // Variáveis
     private final ConexaoDAO conn;
     private ResultSet rs;
-    PreparedStatement ps;
+    private PreparedStatement ps;
 
     // Método construtor da classe
     public AutenticacaoDAO(){

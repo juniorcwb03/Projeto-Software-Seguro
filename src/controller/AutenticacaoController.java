@@ -8,6 +8,8 @@ import view.AutenticacaoView;
 public class AutenticacaoController {
     private final AutenticacaoView autenticacaoView = new AutenticacaoView();
     private AutenticacaoDAO autenticacaoDAO;
+    private TelaPrincipalController telaPrincipalController = new TelaPrincipalController();
+
 
     // Método para autenticar um usuário Conveniado
     public void autenticarConveniado() {
@@ -17,9 +19,11 @@ public class AutenticacaoController {
 
         if(Boolean.TRUE.equals(autenticacaoDAO.autenticarConveniado(conveniado))){
             autenticacaoView.conveniadoAutenticado();
+            telaPrincipalController.menuPrincipal();
         }
         else {
             autenticacaoView.conveniadoNaoAutenticado();
+
         }
     }
 
@@ -30,6 +34,7 @@ public class AutenticacaoController {
 
         if (Boolean.TRUE.equals(autenticacaoDAO.autenticarMedico(medico))) {
             autenticacaoView.medicoAutenticado();
+            telaPrincipalController.menuPrincipalMedico();
         }
         else {
             autenticacaoView.medicoNaoAutenticado();

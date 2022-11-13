@@ -2,11 +2,11 @@ package model;
 
 public class Medico {
     // Variáveis
+    private int id;
     private String nomeCompleto;
     private String cpf;
     private String senha;
     private String areaAtuante;
-    
     private String ruaDaCasa;
     private Float numDaCasa;
     private Float cep;
@@ -75,5 +75,13 @@ public class Medico {
 
     public void setNumDeTelefone(Float numDeTelefone) {
         this.numDeTelefone = numDeTelefone;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

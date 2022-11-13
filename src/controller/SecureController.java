@@ -1,8 +1,75 @@
 package controller;
 
+import java.text.Normalizer;
 import java.util.InputMismatchException;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class SecureController {
+    Scanner sc = new Scanner(System.in);
+
+    public int lerInt(String msgDoConsole, String msgDeErro) {
+        int num = 0;
+        String input;
+        boolean valid = false;
+
+        while (!valid) {
+            System.out.println(msgDoConsole);
+            input = sc.nextLine();
+
+            try {
+                num = Integer.parseInt(input);
+                valid = true;
+            } catch (NumberFormatException | InputMismatchException exception) {
+                System.out.println(msgDeErro);
+            }
+        }
+
+        return num;
+    }
+
+    public float lerFloat(String msgDoConsole, String msgDeErro) {
+        float num = 0;
+        String input;
+        boolean valid = false;
+
+        while(!valid) {
+            System.out.println(msgDoConsole);
+            input = sc.nextLine();
+
+            try {
+                num = Float.parseFloat(input);
+                valid = true;
+            } catch (NumberFormatException | InputMismatchException exception) {
+                System.out.println(msgDeErro);
+            }
+        }
+
+        return num;
+    }
+
+    public String lerString(String msgDoConsole, String msgDeErro) {
+        String input;
+
+        System.out.println(msgDoConsole);
+        input = sc.nextLine();
+
+        input = Normalizer.normalize(input, Normalizer.Form.NFKC);
+        Pattern pattern = Pattern.compile("[<>]");
+        Matcher matcher = pattern.matcher(input);
+
+        while (matcher.find()) {
+            System.out.println(msgDeErro);
+            System.out.println(msgDoConsole);
+            input = sc.nextLine();
+        }
+
+        return input;
+    }
+
+
+
     public boolean isCPF(String cpf) {
 
         cpf = removeCaracteresEspeciais(cpf);

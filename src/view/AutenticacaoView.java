@@ -1,20 +1,24 @@
 package view;
 
+import controller.SecureController;
 import model.Conveniado;
 import model.Medico;
 
-import java.util.Scanner;
 
 public class AutenticacaoView {
     // Variáveis
-    Scanner sc = new Scanner(System.in);
+    SecureController secureController = new SecureController();
 
-    // Método para login do usuário Conveniado, requer CPF e SENHA.
+    private String msgConsole;
+    private static final String ERRO = "Entrada inválida, digite novamente!";
+
+    // Método para ‘login’ do usuário Conveniado, requer CPF e SENHA.
     public Conveniado loginConveniado(Conveniado conveniado) {
-        System.out.println("Digite o CPF (Ex: xxx.xxx.xxx-xx):");
-        conveniado.setCpf(sc.nextLine());
-        System.out.println("Digite sua SENHA:");
-        conveniado.setSenha(sc.nextLine());
+        msgConsole = "Digite o CPF (Ex: xxx.xxx.xxx-xx):";
+        conveniado.setCpf(secureController.lerString(msgConsole, ERRO));
+
+        msgConsole = "Digite sua SENHA:";
+        conveniado.setSenha(secureController.lerString(msgConsole, ERRO));
 
         return conveniado;
     }
@@ -29,12 +33,13 @@ public class AutenticacaoView {
         System.out.println("Falha na autenticação!\nTente novamente!");
     }
 
-    // Método para login de um usuário médico, requer CPF e SENHA.
+    // Método para ‘login’ de um usuário médico, requer CPF e SENHA.
     public Medico loginMedico(Medico medico) {
-        System.out.println("Digite o CPF (Ex: xxx.xxx.xxx-xx):");
-        medico.setCpf(sc.nextLine());
-        System.out.println("Digite sua SENHA:");
-        medico.setSenha(sc.nextLine());
+        msgConsole = "Digite o CPF (Ex: xxx.xxx.xxx-xx):";
+        medico.setCpf(secureController.lerString(msgConsole, ERRO));
+
+        msgConsole = "Digite sua SENHA:";
+        medico.setSenha(secureController.lerString(msgConsole, ERRO));
 
         return medico;
     }
