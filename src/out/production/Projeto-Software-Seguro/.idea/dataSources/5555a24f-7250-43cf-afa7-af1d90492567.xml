@@ -1099,7 +1099,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb3_general_ci</CollationName>
     </table>
     <column id="308" parent="300" name="endereco_ID">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>5</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1128,6 +1128,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="314" parent="301" name="cod_consulta_ID">
+      <AutoIncrement>1</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1144,22 +1145,18 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </column>
     <column id="317" parent="301" name="fk_conveniado_ID">
       <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
     <column id="318" parent="301" name="fk_conveniado_cpf">
       <DataType>varchar(11)|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="319" parent="301" name="fk_registro_medico_ID">
       <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
     <column id="320" parent="301" name="fk_registro_medico_cpf">
       <DataType>varchar(11)|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
     <foreign-key id="321" parent="301" name="fk_table_consulta_table_conveniado1">
@@ -1197,7 +1194,7 @@ fk_registro_medico_cpf</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="327" parent="302" name="conveniado_ID">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>9</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -1219,12 +1216,10 @@ fk_registro_medico_cpf</ColNames>
     </column>
     <column id="331" parent="302" name="fk_endereco_ID">
       <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
     <column id="332" parent="302" name="fk_telefone_ID">
       <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
     <foreign-key id="333" parent="302" name="fk_table_conveniado_endereco_medico1">
@@ -1333,114 +1328,103 @@ fk_conveniado_cpf</ColNames>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="354" parent="305" name="endereco_endereco_ID">
-      <DataType>int|0s</DataType>
+    <column id="354" parent="305" name="senha">
+      <DataType>varchar(16)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="355" parent="305" name="senha">
-      <DataType>varchar(16)|0s</DataType>
-      <NotNull>1</NotNull>
+    <column id="355" parent="305" name="fk_endereco_ID">
+      <DataType>int|0s</DataType>
       <Position>6</Position>
     </column>
-    <column id="356" parent="305" name="fk_endereco_ID">
+    <column id="356" parent="305" name="fk_telefone_ID">
       <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
-    <column id="357" parent="305" name="fk_telefone_ID">
-      <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
-      <Position>8</Position>
-    </column>
-    <foreign-key id="358" parent="305" name="fk_table_registro_medico_endereco_medico1">
+    <foreign-key id="357" parent="305" name="fk_table_registro_medico_endereco_medico1">
       <ColNames>fk_endereco_ID</ColNames>
       <RefColNames>endereco_ID</RefColNames>
       <RefTableName>endereco</RefTableName>
     </foreign-key>
-    <foreign-key id="359" parent="305" name="fk_table_registro_medico_telefone_medico1">
+    <foreign-key id="358" parent="305" name="fk_table_registro_medico_telefone_medico1">
       <ColNames>fk_telefone_ID</ColNames>
       <RefColNames>telefone_ID</RefColNames>
       <RefTableName>telefone</RefTableName>
     </foreign-key>
-    <index id="360" parent="305" name="PRIMARY">
+    <index id="359" parent="305" name="PRIMARY">
       <ColNames>registro_medico_ID
 cpf</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="361" parent="305" name="fk_table_registro_medico_endereco_medico1_idx">
+    <index id="360" parent="305" name="fk_table_registro_medico_endereco_medico1_idx">
       <ColNames>fk_endereco_ID</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="362" parent="305" name="fk_table_registro_medico_telefone_medico1_idx">
+    <index id="361" parent="305" name="fk_table_registro_medico_telefone_medico1_idx">
       <ColNames>fk_telefone_ID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="363" parent="305" name="PRIMARY">
+    <key id="362" parent="305" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="364" parent="306" name="cod_ultima_consulta_ID">
+    <column id="363" parent="306" name="cod_ultima_consulta_ID">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="365" parent="306" name="data">
+    <column id="364" parent="306" name="data">
       <DataType>varchar(10)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="366" parent="306" name="especialidade">
+    <column id="365" parent="306" name="especialidade">
       <DataType>varchar(45)|0s</DataType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="367" parent="306" name="fk_cod_ficha_medica_ID">
+    <column id="366" parent="306" name="fk_cod_ficha_medica_ID">
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <foreign-key id="368" parent="306" name="fk_table_ultima_consulta_table_ficha_medica1">
+    <foreign-key id="367" parent="306" name="fk_table_ultima_consulta_table_ficha_medica1">
       <ColNames>fk_cod_ficha_medica_ID</ColNames>
       <RefColNames>cod_ficha_medica_ID</RefColNames>
       <RefTableName>table_ficha_medica</RefTableName>
     </foreign-key>
-    <index id="369" parent="306" name="PRIMARY">
+    <index id="368" parent="306" name="PRIMARY">
       <ColNames>cod_ultima_consulta_ID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="370" parent="306" name="fk_table_ultima_consulta_table_ficha_medica1_idx">
+    <index id="369" parent="306" name="fk_table_ultima_consulta_table_ficha_medica1_idx">
       <ColNames>fk_cod_ficha_medica_ID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="371" parent="306" name="PRIMARY">
+    <key id="370" parent="306" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="372" parent="307" name="telefone_ID">
-      <AutoIncrement>1</AutoIncrement>
+    <column id="371" parent="307" name="telefone_ID">
+      <AutoIncrement>2</AutoIncrement>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="373" parent="307" name="telefone">
+    <column id="372" parent="307" name="telefone">
       <DataType>bigint|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="374" parent="307" name="telefone_medicocol">
-      <DataType>varchar(45)|0s</DataType>
-      <Position>3</Position>
-    </column>
-    <index id="375" parent="307" name="PRIMARY">
+    <index id="373" parent="307" name="PRIMARY">
       <ColNames>telefone_ID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="376" parent="307" name="PRIMARY">
+    <key id="374" parent="307" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
