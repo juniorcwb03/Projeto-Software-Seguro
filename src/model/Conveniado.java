@@ -9,7 +9,27 @@ public class Conveniado {
     private String ruaDaCasa;
     private Float numDaCasa;
     private Float cep;
+
+    public String getValidaSenha() {
+        return validaSenha;
+    }
+
+    public void setValidaSenha(String validaSenha) {
+        this.validaSenha = validaSenha;
+    }
+
     private Float numDeTelefone;
+    private String validaSenha;
+
+    public String getValidaCpf() {
+        return validaCpf;
+    }
+
+    public void setValidaCpf(String validaCpf) {
+        this.validaCpf = validaCpf;
+    }
+
+    private String validaCpf;
 
     // Métodos de Get e Set da classe
     public String getNomeCompleto() {
@@ -20,10 +40,11 @@ public class Conveniado {
         this.nomeCompleto = nomeCompleto;
     }
 
+    //teste
     public String getCpf() {
         return cpf;
     }
-
+//teste
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }

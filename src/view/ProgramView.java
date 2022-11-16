@@ -11,9 +11,9 @@ public class ProgramView {
 
     public int opcaoDePagina() {
         int opcao;
-        msgConsole = "Opções:\n[0] - Página de Cadastro\n[1] - Página de Autenticação\nOpção: ";
+        msgConsole = "Opções:\n[0] - Cadastro\n[1] - Autenticar\n[2] - Editar um Conveniado\n[3] - Editar um medico\nOpção:";
         opcao = secureController.lerInt(msgConsole, ERRO);
-        while (opcao < 0 || opcao > 1) {
+        while (opcao < 0 || opcao > 3) {
             System.out.println("Opção inválida, tente novamente!");
             opcao = secureController.lerInt(msgConsole, ERRO);
         }

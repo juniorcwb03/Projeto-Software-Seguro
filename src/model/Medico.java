@@ -11,6 +11,24 @@ public class Medico {
     private Float numDaCasa;
     private Float cep;
     private Float numDeTelefone;
+    private String validaCpf;
+    private String validaSenha;
+
+    public String getValidaSenha() {
+        return validaSenha;
+    }
+
+    public void setValidaSenha(String validaSenha) {
+        this.validaSenha = validaSenha;
+    }
+
+    public String getValidaCpf() {
+        return validaCpf;
+    }
+
+    public void setValidaCpf(String validaCpf) {
+        this.validaCpf = validaCpf;
+    }
 
     // Métodos de Get e Set da classe
     public String getAreaAtuante() {
@@ -84,4 +102,6 @@ public class Medico {
     public void setId(int id) {
         this.id = id;
     }
+
+
 }

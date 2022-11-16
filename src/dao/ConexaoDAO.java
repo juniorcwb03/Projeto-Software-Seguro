@@ -16,7 +16,7 @@ public class ConexaoDAO {
         // Variáveis
         String conBanco = "jdbc:mysql://localhost:3306/mydb?allowPublicKeyRetrieval=true&useSSL=false";
         String usuarioMysql = "root";
-        String senhaMysql = "013710";
+        String senhaMysql = "root";
         instance = null;
 
         try {

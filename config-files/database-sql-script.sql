@@ -25,7 +25,7 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `mydb`.`telefone_medico` (
   `telefone_ID` INT(11) NOT NULL AUTO_INCREMENT,
   `telefone` MEDIUMINT(12) NULL DEFAULT NULL,
-  `table_registro_medico_registro_medico_ID` INT(11) NOT NULL,
+  `table_registro_medico_registro_medico_ID` INT(11) ,
   `table_registro_medico_cpf` VARCHAR(14) NOT NULL,
   PRIMARY KEY (`telefone_ID`),
   INDEX `fk_telefone_medico_table_registro_medico1_idx` (`table_registro_medico_registro_medico_ID` ASC, `table_registro_medico_cpf` ASC) VISIBLE,
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`endereco_medico` (
   `cep` VARCHAR(8) NOT NULL,
   `rua` VARCHAR(45) NULL DEFAULT NULL,
   `numero` INT(5) NULL DEFAULT NULL,
-  `table_registro_medico_registro_medico_ID` INT(11) NOT NULL,
+  `table_registro_medico_registro_medico_ID` INT(11) 
   `table_registro_medico_cpf` VARCHAR(14) NOT NULL,
   PRIMARY KEY (`endereco_ID`),
   INDEX `fk_endereco_medico_table_registro_medico_idx` (`table_registro_medico_registro_medico_ID` ASC, `table_registro_medico_cpf` ASC) VISIBLE,
@@ -69,7 +69,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`table_consulta` (
   `hora` VARCHAR(5) NOT NULL,
   `table_conveniado_conveniado_ID` INT(11) NOT NULL,
   `table_conveniado_cpf` VARCHAR(14) NOT NULL,
-  `table_registro_medico_registro_medico_ID` INT(11) NOT NULL,
+  `table_registro_medico_registro_medico_ID` INT(11) ,
   `table_registro_medico_cpf` VARCHAR(14) NOT NULL,
   PRIMARY KEY (`cod_consulta_ID`),
   INDEX `fk_table_consulta_table_conveniado1_idx` (`table_conveniado_conveniado_ID` ASC, `table_conveniado_cpf` ASC) VISIBLE,
