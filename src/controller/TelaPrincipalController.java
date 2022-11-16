@@ -14,9 +14,9 @@ public class TelaPrincipalController {
                 Consulta consulta = new Consulta();
                 consulta = telaPrincipalView.marcarConsulta();
                 if (!telaPrincipalDAO.marcarConsulta(consulta)) {
-                   telaPrincipalView.consultaNaoMarcada();
-                } else {
                     telaPrincipalView.consultaMarcada();
+                } else {
+                    telaPrincipalView.consultaNaoMarcada();
                 }
             }
             case 2 -> {}

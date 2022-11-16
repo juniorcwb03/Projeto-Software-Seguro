@@ -68,8 +68,6 @@ public class SecureController {
         return input;
     }
 
-
-
     public boolean isCPF(String cpf) {
 
         cpf = removeCaracteresEspeciais(cpf);

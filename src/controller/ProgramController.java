@@ -26,7 +26,6 @@ public class ProgramController {
                         } else {
                             cadastroView.conveniadoCadastrado();
                             autenticacaoController.autenticarConveniado();
-
                         }
                     }
                     case 1 -> {
@@ -50,7 +49,7 @@ public class ProgramController {
                 }
             }
             case 1 -> {
-                switch(programView.opcaoDeCadastro()) {
+                switch(programView.opcaoDeAutenticacao()) {
                     case 0 -> autenticacaoController.autenticarConveniado();
                     case 1 -> autenticacaoController.autenticarMedico();
                     default -> cadastroView.opcaoInvalida();
