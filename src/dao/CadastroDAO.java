@@ -59,7 +59,7 @@ public class CadastroDAO {
     public Boolean cadastrarTelefoneConveniado(Conveniado conveniado) {
         try {
             String query;
-            query = "INSERT INTO table_telefone (telefone, conveniado_cpf, conveniado_ID, conveniado_cpf) VALUES (?, ?, ?)";
+            query = "INSERT INTO table_telefone (telefone, conveniado_cpf, conveniado_ID) VALUES (?, ?, ?)";
             ps = conn.getConexao().prepareStatement(query);
             ps.setFloat(1, conveniado.getNumDeTelefone());
             ps.setString(2, conveniado.getCpf());
@@ -79,11 +79,13 @@ public class CadastroDAO {
     public Boolean cadastrarEnderecoConveniado(Conveniado conveniado) {
         try {
             String query;
-            query = "INSERT INTO table_endereco (cep, rua, numero) VALUES (?, ?, ?)";
+            query = "INSERT INTO table_endereco (cep, rua, numero, telefone_conveniado_cpf, conveniado_ID) VALUES (?, ?, ?, ?, ?)";
             ps = conn.getConexao().prepareStatement(query);
             ps.setFloat(1, conveniado.getCep());
             ps.setString(2, conveniado.getRuaDaCasa());
             ps.setFloat(3, conveniado.getNumDaCasa());
+            ps.setString(4, conveniado.getCpf());
+            ps.setInt(5, conveniado.getId());
             this.rsBoolean = ps.execute();
 
             return rsBoolean;

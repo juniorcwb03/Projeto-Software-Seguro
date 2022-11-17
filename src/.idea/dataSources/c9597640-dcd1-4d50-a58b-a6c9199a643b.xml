@@ -1102,32 +1102,36 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="308" parent="300" name="medico_ID">
+    <column id="308" parent="300" name="table_registro_medico_registro_medico_ID">
       <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="309" parent="300" name="medico_cpf">
+    <column id="309" parent="300" name="table_registro_medico_cpf">
       <DataType>varchar(14)|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="310" parent="300" name="conveniado_ID">
+    <column id="310" parent="300" name="table_registro_conveniado_conveniado_ID">
       <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <column id="311" parent="300" name="conveniado_cpf">
+    <column id="311" parent="300" name="table_registro_conveniado_cpf">
       <DataType>varchar(14)|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>7</Position>
     </column>
     <foreign-key id="312" parent="300" name="fk_table_consulta_table_registro_medico">
-      <ColNames>medico_ID
-medico_cpf</ColNames>
+      <ColNames>table_registro_medico_registro_medico_ID
+table_registro_medico_cpf</ColNames>
       <RefColNames>registro_medico_ID
 cpf</RefColNames>
       <RefTableName>table_registro_medico</RefTableName>
     </foreign-key>
     <foreign-key id="313" parent="300" name="fk_table_consulta_table_registro_conveniado1">
-      <ColNames>conveniado_ID
-conveniado_cpf</ColNames>
+      <ColNames>table_registro_conveniado_conveniado_ID
+table_registro_conveniado_cpf</ColNames>
       <RefColNames>conveniado_ID
 cpf</RefColNames>
       <RefTableName>table_registro_conveniado</RefTableName>
@@ -1138,13 +1142,13 @@ cpf</RefColNames>
       <Unique>1</Unique>
     </index>
     <index id="315" parent="300" name="fk_table_consulta_table_registro_medico_idx">
-      <ColNames>medico_ID
-medico_cpf</ColNames>
+      <ColNames>table_registro_medico_registro_medico_ID
+table_registro_medico_cpf</ColNames>
       <Type>btree</Type>
     </index>
     <index id="316" parent="300" name="fk_table_consulta_table_registro_conveniado1_idx">
-      <ColNames>conveniado_ID
-conveniado_cpf</ColNames>
+      <ColNames>table_registro_conveniado_conveniado_ID
+table_registro_conveniado_cpf</ColNames>
       <Type>btree</Type>
     </index>
     <key id="317" parent="300" name="PRIMARY">
@@ -1300,33 +1304,56 @@ cpf</ColNames>
       <DataType>bigint(9) unsigned zerofill|0s</DataType>
       <Position>2</Position>
     </column>
-    <column id="347" parent="304" name="medico_ID">
+    <column id="347" parent="304" name="table_registro_medico_registro_medico_ID">
       <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="348" parent="304" name="medico_cpf">
+    <column id="348" parent="304" name="table_registro_medico_cpf">
       <DataType>varchar(14)|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="349" parent="304" name="conveniado_ID">
+    <column id="349" parent="304" name="table_registro_conveniado_conveniado_ID">
       <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <index id="350" parent="304" name="PRIMARY">
+    <column id="350" parent="304" name="table_registro_conveniado_cpf">
+      <DataType>varchar(14)|0s</DataType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <foreign-key id="351" parent="304" name="fk_table_telefone_table_registro_medico1">
+      <ColNames>table_registro_medico_registro_medico_ID
+table_registro_medico_cpf</ColNames>
+      <RefColNames>registro_medico_ID
+cpf</RefColNames>
+      <RefTableName>table_registro_medico</RefTableName>
+    </foreign-key>
+    <foreign-key id="352" parent="304" name="fk_table_telefone_table_registro_conveniado1">
+      <ColNames>table_registro_conveniado_conveniado_ID
+table_registro_conveniado_cpf</ColNames>
+      <RefColNames>conveniado_ID
+cpf</RefColNames>
+      <RefTableName>table_registro_conveniado</RefTableName>
+    </foreign-key>
+    <index id="353" parent="304" name="PRIMARY">
       <ColNames>telefone_ID</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="351" parent="304" name="fk_table_telefone_table_registro_medico1_idx">
-      <ColNames>medico_ID
-medico_cpf</ColNames>
+    <index id="354" parent="304" name="fk_table_telefone_table_registro_medico1_idx">
+      <ColNames>table_registro_medico_registro_medico_ID
+table_registro_medico_cpf</ColNames>
       <Type>btree</Type>
     </index>
-    <index id="352" parent="304" name="fk_table_telefone_table_registro_conveniado1_idx">
-      <ColNames>conveniado_ID</ColNames>
+    <index id="355" parent="304" name="fk_table_telefone_table_registro_conveniado1_idx">
+      <ColNames>table_registro_conveniado_conveniado_ID
+table_registro_conveniado_cpf</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="353" parent="304" name="PRIMARY">
+    <key id="356" parent="304" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
