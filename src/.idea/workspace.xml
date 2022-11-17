@@ -2,58 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7cfd564-5961-4661-9f26-10f010e8c9ec" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../config-files/mysql-connector-j-8.0.31.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_0_31.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/ProgramController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/controller/TelaPrincipalController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dao/TelaPrincipalDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/Consulta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/ProgramView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/TelaPrincipalView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5555a24f-7250-43cf-afa7-af1d90492567.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5555a24f-7250-43cf-afa7-af1d90492567.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_30.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_301.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/1/01267408212a543f4d71a3568e03d5ae8360cac0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/9/498676c0797fdb0490076510c16a530b7fa7b7d2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/d/4dc457e06b154ff9fbe440db0bb4623636845934" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/9/69cdb079609ed3ce1e356d44cff508330a5787c4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/1/d1d133b554baeec96c8359c2479230dd14e0a7f1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/9/e9a799f78956f1153405e3cea9b02523dacb1448" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../config-files/database-sql-script.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../config-files/database-sql-script.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5555a24f-7250-43cf-afa7-af1d90492567.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5555a24f-7250-43cf-afa7-af1d90492567/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5555a24f-7250-43cf-afa7-af1d90492567/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5555a24f-7250-43cf-afa7-af1d90492567/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5555a24f-7250-43cf-afa7-af1d90492567/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/c/dc23b80075ff1ba340ad1f5a3c1a9294cf380e83" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Projeto-Software-Seguro.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Projeto-Software-Seguro.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/AutenticacaoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controller/AutenticacaoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/CadastrarConveniadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CadastrarConveniadoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/CadastrarMedicoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CadastrarMedicoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/InicializacaoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/SecureController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controller/SecureController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/AutenticacaoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/AutenticacaoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/CadastroDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/CadastroDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dao/ConexaoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/dao/ConexaoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Conveniado.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/Conveniado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/Medico.java" beforeDir="false" afterPath="$PROJECT_DIR$/model/Medico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/.idea/dataSources/5555a24f-7250-43cf-afa7-af1d90492567.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/.idea/dataSources/5555a24f-7250-43cf-afa7-af1d90492567.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/.idea/libraries/mysql_connector_java_8_0_30.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/.idea/libraries/mysql_connector_java_8_0_301.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/Projeto-Software-Seguro.iml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/Projeto-Software-Seguro.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/controller/CadastrarConveniadoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/controller/CadastrarConveniadoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/controller/CadastrarMedicoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/controller/CadastrarMedicoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/controller/InicializacaoController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/controller/SecureController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/controller/SecureController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/dao/CadastroDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/dao/CadastroDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/dao/ConexaoDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/dao/ConexaoDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/view/CadastroView.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/view/CadastroView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projeto-Software-Seguro/view/InicializacaoView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/AutenticacaoView.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/AutenticacaoView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/CadastroView.java" beforeDir="false" afterPath="$PROJECT_DIR$/view/CadastroView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/InicializacaoView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ProgramaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ProgramaController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +112,8 @@
       <workItem from="1668174769788" duration="4800000" />
       <workItem from="1668301315567" duration="3213000" />
       <workItem from="1668348829732" duration="15665000" />
-      <workItem from="1668371378024" duration="6371000" />
+      <workItem from="1668371378024" duration="10160000" />
+      <workItem from="1668695941261" duration="14830000" />
     </task>
     <servers />
   </component>
@@ -183,6 +144,10 @@
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.util.NoSuchElementException" package="java.util" />
           <option name="timeStamp" value="2" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLSyntaxErrorException" package="java.sql" />
+          <option name="timeStamp" value="3" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>

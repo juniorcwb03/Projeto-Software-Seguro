@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `mydb`.`endereco_medico` (
   `cep` VARCHAR(8) NOT NULL,
   `rua` VARCHAR(45) NULL DEFAULT NULL,
   `numero` INT(5) NULL DEFAULT NULL,
-  `table_registro_medico_registro_medico_ID` INT(11) 
+  `table_registro_medico_registro_medico_ID` INT(11), 
   `table_registro_medico_cpf` VARCHAR(14) NOT NULL,
   PRIMARY KEY (`endereco_ID`),
   INDEX `fk_endereco_medico_table_registro_medico_idx` (`table_registro_medico_registro_medico_ID` ASC, `table_registro_medico_cpf` ASC) VISIBLE,

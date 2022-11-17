@@ -60,7 +60,7 @@ public class ProgramaController {
                     boolean b = cadastrarConveniadoController.cadastrarTelefone(conveniado);
                     boolean c = cadastrarConveniadoController.cadastrarEndereco(conveniado);
 
-                    if (!a && b && c) {
+                    if (!a && !b && !c) {
                         cadastroView.conveniadoNaoEditado();
                     } else {
                         cadastroView.editarCadastradoCoveniado();
@@ -77,7 +77,7 @@ public class ProgramaController {
                     boolean b = cadastrarMedicoController.cadastrarTelefone(medico);
                     boolean c = cadastrarMedicoController.cadastrarEndereco(medico);
 
-                    if (!a && b && c) {
+                    if (!a && !b && !c) {
                         cadastroView.editarNaoCadastradoMedico();
                     } else {
                         cadastroView.editarCadastradoMedico();
