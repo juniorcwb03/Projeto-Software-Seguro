@@ -1,12 +1,14 @@
 package controller;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.text.Normalizer;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class SecureController {
+public class SegurancaController {
     Scanner sc = new Scanner(System.in);
 
     public int lerInt(String msgDoConsole, String msgDeErro) {
@@ -66,6 +68,24 @@ public class SecureController {
         }
 
         return input;
+    }
+
+    public static String fazerHash(String senha) {
+        try {
+            MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
+            messageDigest.update(senha.getBytes());
+
+            byte[] resultByteArray = messageDigest.digest();
+
+            StringBuilder stringBuilder = new StringBuilder();
+            for (byte b : resultByteArray) {
+                senha = String.valueOf(stringBuilder.append(String.format("%02x", b)));
+            }
+
+            return senha;
+        } catch (NoSuchAlgorithmException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
     public boolean isCPF(String cpf) {

@@ -23,7 +23,7 @@ public class AutenticacaoDAO {
     public Boolean autenticarConveniado (Conveniado conveniado){
         try{
             String query;
-            query = "SELECT * FROM table_conveniado WHERE cpf=? AND senha=?";
+            query = "SELECT * FROM table_registro_conveniado WHERE cpf=? AND senha=?";
             ps = conn.getConexao().prepareStatement(query);
             ps.setString(1, conveniado.getCpf());
             ps.setString(2, conveniado.getSenha());
@@ -32,7 +32,6 @@ public class AutenticacaoDAO {
             return rs.next();
         }
         catch(SQLException ex) {
-            JOptionPane.showMessageDialog(null, ex.getMessage());
             ex.printStackTrace();
         }
 

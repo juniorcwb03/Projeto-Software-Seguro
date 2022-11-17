@@ -8,7 +8,7 @@ import view.AutenticacaoView;
 public class AutenticacaoController {
     private final AutenticacaoView autenticacaoView = new AutenticacaoView();
     private AutenticacaoDAO autenticacaoDAO;
-    private TelaPrincipalController telaPrincipalController = new TelaPrincipalController();
+    private final TelaPrincipalController telaPrincipalController = new TelaPrincipalController();
 
 
     // Método para autenticar um usuário Conveniado

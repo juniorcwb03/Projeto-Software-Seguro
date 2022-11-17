@@ -1,49 +1,45 @@
 package view;
 
-import controller.SecureController;
+import controller.SegurancaController;
 import model.Conveniado;
 import model.Medico;
 
 public class CadastroView {
     // Variáveis
-    SecureController secureController = new SecureController();
-    Conveniado conveniado = new Conveniado();
-    Medico medico = new Medico();
+    SegurancaController segurancaController = new SegurancaController();
 
     private String msgConsole;
     private static final String ERRO = "Entrada inválida, digite novamente!";
+    private static final String CPF = "Digite o CPF apenas números (Ex: 499xxxxxx85):";
+    private static final String NOME_COMPLETO = "Digite seu NOME COMPLETO:";
+    private static final String SENHA = "Digite a SENHA:";
 
-    public Conveniado cadastroConveniado(Conveniado conveniado) {
-        msgConsole = "Digite o CPF apenas números (Ex: 499xxxxxx85):";
-        conveniado.setCpf(secureController.lerString(msgConsole, ERRO));
+    public void cadastroConveniado(Conveniado conveniado) {
+        System.out.println("\nPÁGINA DE CADASTRO DE UM NOVO CONVENIADO\n");
+        msgConsole = CPF;
+        conveniado.setCpf(segurancaController.lerString(msgConsole, ERRO));
 
-        msgConsole = "Digite seu NOME COMPLETO:";
-        conveniado.setNomeCompleto(secureController.lerString(msgConsole, ERRO));
+        msgConsole = NOME_COMPLETO;
+        conveniado.setNomeCompleto(segurancaController.lerString(msgConsole, ERRO));
 
-        msgConsole = "Digite a SENHA:";
-        conveniado.setSenha(secureController.lerString(msgConsole, ERRO));
-
-        return conveniado;
+        msgConsole = SENHA;
+        conveniado.setSenha(segurancaController.lerString(msgConsole, ERRO));
     }
 
-    public Conveniado cadastroConveniadoTelefone(Conveniado conveniado) {
+    public void cadastroConveniadoTelefone(Conveniado conveniado) {
         msgConsole = "Digite o número do telefone (Apenas números)";
-        conveniado.setNumDeTelefone(secureController.lerFloat(msgConsole, ERRO));
-
-        return conveniado;
+        conveniado.setNumDeTelefone(segurancaController.lerFloat(msgConsole, ERRO));
     }
 
-    public Conveniado cadastroConveniadoEndereco(Conveniado conveniado) {
+    public void cadastroConveniadoEndereco(Conveniado conveniado) {
         msgConsole = "Digite o CEP (Apenas números):";
-        conveniado.setCep(secureController.lerFloat(msgConsole, ERRO));
+        conveniado.setCep(segurancaController.lerFloat(msgConsole, ERRO));
 
         msgConsole = "Digite a RUA:";
-        conveniado.setRuaDaCasa(secureController.lerString(msgConsole, ERRO));
+        conveniado.setRuaDaCasa(segurancaController.lerString(msgConsole, ERRO));
 
         msgConsole = "Digite o NÚMERO DA CASA:";
-        conveniado.setNumDaCasa(secureController.lerFloat(msgConsole, ERRO));
-
-        return conveniado;
+        conveniado.setNumDaCasa(segurancaController.lerFloat(msgConsole, ERRO));
     }
 
     // Mostrar que o usuário Conveniado foi cadastrado
@@ -56,40 +52,35 @@ public class CadastroView {
         System.out.println("Falha no cadastro!\nTente novamente!");
     }
 
-    public Medico cadastroMedico(Medico medico) {
-        msgConsole = "Digite o CPF apenas números (Ex: 499xxxxxx85):";
-        medico.setCpf(secureController.lerString(msgConsole, ERRO));
+    public void cadastroMedico(Medico medico) {
+        System.out.println("\nPÁGINA DE CADASTRO DE UM NOVO MÉDICO\n");
+        msgConsole = CPF;
+        medico.setCpf(segurancaController.lerString(msgConsole, ERRO));
 
-        msgConsole = "Digite seu NOME COMPLETO:";
-        medico.setNomeCompleto(secureController.lerString(msgConsole, ERRO));
+        msgConsole = NOME_COMPLETO;
+        medico.setNomeCompleto(segurancaController.lerString(msgConsole, ERRO));
 
         msgConsole = "Digite a ÁREA ATUANTE (Ex: Odonto):";
-        medico.setAreaAtuante(secureController.lerString(msgConsole, ERRO));
+        medico.setAreaAtuante(segurancaController.lerString(msgConsole, ERRO));
 
-        msgConsole = "Digite a SENHA:";
-        medico.setSenha(secureController.lerString(msgConsole, ERRO));
-
-        return medico;
+        msgConsole = SENHA;
+        medico.setSenha(segurancaController.lerString(msgConsole, ERRO));
     }
 
-    public Medico cadastroMedicoTelefone(Medico medico) {
+    public void cadastroMedicoTelefone(Medico medico) {
         msgConsole = "Digite o número do telefone (Apenas números):";
-        medico.setNumDeTelefone(secureController.lerFloat(msgConsole, ERRO));
-
-        return medico;
+        medico.setNumDeTelefone(segurancaController.lerFloat(msgConsole, ERRO));
     }
 
-    public Medico cadastroMedicoEndereco(Medico medico) {
+    public void cadastroMedicoEndereco(Medico medico) {
         msgConsole = "Digite o CEP (Apenas números):";
-        medico.setCep(secureController.lerFloat(msgConsole, ERRO));
+        medico.setCep(segurancaController.lerFloat(msgConsole, ERRO));
 
         msgConsole = "Digite a RUA:";
-        medico.setRuaDaCasa(secureController.lerString(msgConsole, ERRO));
+        medico.setRuaDaCasa(segurancaController.lerString(msgConsole, ERRO));
 
         msgConsole = "Digite o NÚMERO DA CASA:";
-        medico.setNumDaCasa(secureController.lerFloat(msgConsole, ERRO));
-
-        return medico;
+        medico.setNumDaCasa(segurancaController.lerFloat(msgConsole, ERRO));
     }
 
     // Mostrar que o usuário Médico foi cadastrado
@@ -105,7 +96,7 @@ public class CadastroView {
     public int qtdDeTelefones() {
         int qtdDeTelefones;
         msgConsole = "Quantos telefones deseja cadastrar (0 para nenhum):";
-        qtdDeTelefones = secureController.lerInt(msgConsole, ERRO);
+        qtdDeTelefones = segurancaController.lerInt(msgConsole, ERRO);
 
         return qtdDeTelefones;
     }
@@ -114,106 +105,29 @@ public class CadastroView {
         System.out.println("Opção inválida, tente novamente!");
     }
 
-    public Conveniado editarConveniado(Conveniado conveniado) {
-        msgConsole = "Digite o CPF apenas números (Ex: 499xxxxxx85):";
-        conveniado.setCpf(secureController.lerString(msgConsole, ERRO));
-
-        msgConsole = "Digite seu NOME COMPLETO:";
-        conveniado.setNomeCompleto(secureController.lerString(msgConsole, ERRO));
-
-        msgConsole = "Digite a SENHA:";
-        conveniado.setSenha(secureController.lerString(msgConsole, ERRO));
-
-        return conveniado;
-    }
-
-
-
-    public Conveniado editarConveniadoTelefone(Conveniado conveniado) {
-        msgConsole = "Digite o número do telefone (Apenas números)";
-        conveniado.setNumDeTelefone(secureController.lerFloat(msgConsole, ERRO));
-
-        return conveniado;
-    }
-
-    public Conveniado editarConveniadoEndereco(Conveniado conveniado) {
-        msgConsole = "Digite o CEP (Apenas números):";
-        conveniado.setCep(secureController.lerFloat(msgConsole, ERRO));
-
-        msgConsole = "Digite a RUA:";
-        conveniado.setRuaDaCasa(secureController.lerString(msgConsole, ERRO));
-
-        msgConsole = "Digite o NÚMERO DA CASA:";
-        conveniado.setNumDaCasa(secureController.lerFloat(msgConsole, ERRO));
-
-        return conveniado;
-    }
-
-    public Conveniado buscarConveniadoEditar(Conveniado conveniado) {
+    public void buscarConveniadoEditar(Conveniado conveniado) {
+        System.out.println("\nPÁGINA DE BUSCA PARA CONVENIADOS REGISTRADOS NO SISTEMA\n");
         msgConsole = "Digite o cpf que deseja alterar os registros";
-        conveniado.setValidaCpf(secureController.lerString(msgConsole, ERRO));
-
-
-        return conveniado;
+        conveniado.setValidaCpf(segurancaController.lerString(msgConsole, ERRO));
     }
 
-    public Medico buscarMedicoEditar(Medico medico) {
+    public void buscarMedicoEditar(Medico medico) {
+        System.out.println("\nPÁGINA DE BUSCA PARA MÉDICOS REGISTRADOS NO SISTEMA\n");
         msgConsole = "Digite o cpf que deseja alterar os registros";
-        medico.setValidaCpf(secureController.lerString(msgConsole, ERRO));
+        medico.setValidaCpf(segurancaController.lerString(msgConsole, ERRO));
 
         msgConsole = "Digite a senha que deseja alterar os registros";
-        medico.setValidaSenha(secureController.lerString(msgConsole, ERRO));
-
-
-        return medico;
+        medico.setValidaSenha(segurancaController.lerString(msgConsole, ERRO));
     }
-
-
-
+    
     // Mostrar que o usuário Conveniado não foi autenticado
     public void conveniadoNaoEditado() {
         System.out.println("Falha, não editado!\nTente novamente!");
     }
 
-    public Medico editarMedico(Medico medico) {
-        msgConsole = "Digite o CPF apenas números (Ex: 499xxxxxx85):";
-        medico.setCpf(secureController.lerString(msgConsole, ERRO));
-
-        msgConsole = "Digite seu NOME COMPLETO:";
-        medico.setNomeCompleto(secureController.lerString(msgConsole, ERRO));
-
-        msgConsole = "Digite a ÁREA ATUANTE (Ex: Odonto):";
-        medico.setAreaAtuante(secureController.lerString(msgConsole, ERRO));
-
-        msgConsole = "Digite a SENHA:";
-        medico.setSenha(secureController.lerString(msgConsole, ERRO));
-
-        return medico;
-    }
-
-    public Medico editarMedicoTelefone(Medico medico) {
-        msgConsole = "Digite o número do telefone (Apenas números):";
-        medico.setNumDeTelefone(secureController.lerFloat(msgConsole, ERRO));
-
-        return medico;
-    }
-
-    public Medico editarMedicoEndereco(Medico medico) {
-        msgConsole = "Digite o CEP (Apenas números):";
-        medico.setCep(secureController.lerFloat(msgConsole, ERRO));
-
-        msgConsole = "Digite a RUA:";
-        medico.setRuaDaCasa(secureController.lerString(msgConsole, ERRO));
-
-        msgConsole = "Digite o NÚMERO DA CASA:";
-        medico.setNumDaCasa(secureController.lerFloat(msgConsole, ERRO));
-
-        return medico;
-    }
-
     // Mostrar que o usuário Médico foi cadastrado
     public void editarCadastradoMedico() {
-        System.out.println("Sucesso na edição de um  médico no sistema!");
+        System.out.println("Sucesso na edição de um médico no sistema!");
     }
 
     // Mostrar que o usuário Médico não foi autenticado
@@ -223,6 +137,6 @@ public class CadastroView {
 
 
     public void editarCadastradoCoveniado() {
-        System.out.println("Sucesso na edição de um  conveniado no sistema!");
+        System.out.println("Sucesso na edição de um conveniado no sistema!");
     }
 }

@@ -1,13 +1,11 @@
 package dao;
 
-import javax.swing.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class ConexaoDAO {
     private Connection conn;
-    private static ConexaoDAO instance;
 
     // Método construtor da classe
     public ConexaoDAO() {
@@ -16,30 +14,14 @@ public class ConexaoDAO {
         // Variáveis
         String conBanco = "jdbc:mysql://localhost:3306/mydb?allowPublicKeyRetrieval=true&useSSL=false";
         String usuarioMysql = "root";
-        String senhaMysql = "root";
-        instance = null;
+        String senhaMysql = "013710";
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             conn = DriverManager.getConnection(conBanco, usuarioMysql, senhaMysql);
-        } catch (ClassNotFoundException ex) {
-            JOptionPane.showMessageDialog(null, ex.getMessage());
-            ex.printStackTrace();
-        } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, ex.getMessage());
-            ex.printStackTrace();
-        } catch (Exception ex) {
-            JOptionPane.showMessageDialog(null, ex.getMessage());
+        } catch (ClassNotFoundException | SQLException ex) {
             ex.printStackTrace();
         }
-    }
-
-    public static ConexaoDAO getInstance() {
-        return instance;
-    }
-
-    public static void setInstance(ConexaoDAO instance) {
-        ConexaoDAO.instance = instance;
     }
 
     // Método para obter estado da conexão

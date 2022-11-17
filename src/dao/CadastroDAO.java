@@ -1,13 +1,13 @@
 package dao;
 
-import com.mysql.cj.protocol.Resultset;
 import model.Conveniado;
 import model.Medico;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class CadastroDAO {
     // Variáveis
@@ -22,10 +22,22 @@ public class CadastroDAO {
 
     // Método para cadastrar um conveniado
     public Boolean cadastrarConveniado(Conveniado conveniado) {
-        // UTILIZAR O VALOR DE RETORNO
         try {
             String query;
-            query = "INSERT INTO table_conveniado (cpf, nomeCompleto, senha) VALUES (?, ?, ?)";
+            String senha = null;
+            query = "INSERT INTO table_registro_conveniado (cpf, nomeCompleto, senha) VALUES (?, ?, ?)";
+
+            MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
+            messageDigest.update(conveniado.getSenha().getBytes());
+
+            byte[] resultByteArray = messageDigest.digest();
+
+            StringBuilder stringBuilder = new StringBuilder();
+            for (byte b : resultByteArray) {
+                senha = String.valueOf(stringBuilder.append(String.format("%02x", b)));
+            }
+            conveniado.setSenha(senha);
+
             ps = conn.getConexao().prepareStatement(query);
             ps.setString(1, conveniado.getCpf());
             ps.setString(2, conveniado.getNomeCompleto());
@@ -36,6 +48,8 @@ public class CadastroDAO {
         }
         catch (SQLException ex) {
             ex.printStackTrace();
+        } catch (NoSuchAlgorithmException ex) {
+            throw new RuntimeException(ex);
         }
 
         return rsBoolean;
@@ -45,10 +59,11 @@ public class CadastroDAO {
     public Boolean cadastrarTelefoneConveniado(Conveniado conveniado) {
         try {
             String query;
-            query = "INSERT INTO telefone_conveniado (telefone,table_conveniado_cpf) VALUE (?,?)";
+            query = "INSERT INTO table_telefone (telefone, conveniado_cpf, conveniado_ID, conveniado_cpf) VALUES (?, ?, ?)";
             ps = conn.getConexao().prepareStatement(query);
             ps.setFloat(1, conveniado.getNumDeTelefone());
             ps.setString(2, conveniado.getCpf());
+            ps.setInt(3, conveniado.getId());
             this.rsBoolean = ps.execute();
 
             return rsBoolean;
@@ -64,12 +79,11 @@ public class CadastroDAO {
     public Boolean cadastrarEnderecoConveniado(Conveniado conveniado) {
         try {
             String query;
-            query = "INSERT INTO endereco_conveniado (cep, rua, numero,table_conveniado_cpf) VALUES (?, ?, ?,?)";
+            query = "INSERT INTO table_endereco (cep, rua, numero) VALUES (?, ?, ?)";
             ps = conn.getConexao().prepareStatement(query);
             ps.setFloat(1, conveniado.getCep());
             ps.setString(2, conveniado.getRuaDaCasa());
             ps.setFloat(3, conveniado.getNumDaCasa());
-            ps.setString(4, conveniado.getCpf());
             this.rsBoolean = ps.execute();
 
             return rsBoolean;
@@ -84,6 +98,19 @@ public class CadastroDAO {
     public Boolean cadastrarMedico(Medico medico) {
         try {
             String query;
+            String senha = null;
+
+            MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
+            messageDigest.update(medico.getSenha().getBytes());
+
+            byte[] resultByteArray = messageDigest.digest();
+
+            StringBuilder stringBuilder = new StringBuilder();
+            for (byte b : resultByteArray) {
+                senha = String.valueOf(stringBuilder.append(String.format("%02x", b)));
+            }
+            medico.setSenha(senha);
+
             query = "INSERT INTO table_registro_medico (cpf, nome_completo, area_atuante, senha) VALUES (?, ?, ?, ?)";
             ps = conn.getConexao().prepareStatement(query);
             ps.setString(1, medico.getCpf());
@@ -96,6 +123,8 @@ public class CadastroDAO {
         }
         catch(SQLException ex) {
             ex.printStackTrace();
+        } catch (NoSuchAlgorithmException ex) {
+            throw new RuntimeException(ex);
         }
 
         return rsBoolean;
@@ -104,10 +133,11 @@ public class CadastroDAO {
     public Boolean cadastrarTelefoneMedico(Medico medico) {
         try {
             String query;
-            query = "INSERT INTO telefone_medico (telefone,table_registro_medico_cpf) VALUE (?,?)";
+            query = "INSERT INTO table_telefone (telefone, medico_cpf, medico_id) VALUES (?, ?, ?)";
             ps = conn.getConexao().prepareStatement(query);
             ps.setFloat(1, medico.getNumDeTelefone());
             ps.setString(2, medico.getCpf());
+            ps.setInt(3, medico.getId());
             this.rsBoolean = ps.execute();
 
             return rsBoolean;
@@ -122,135 +152,13 @@ public class CadastroDAO {
     public Boolean cadastrarEnderecoMedico(Medico medico) {
         try {
             String query;
-            query = "INSERT INTO endereco_medico (cep, rua, numero,table_registro_medico_cpf) VALUES (?, ?, ?,?)";
+            query = "INSERT INTO table_endereco (cep, rua, numero, medico_cpf, medico_ID) VALUES (?, ?, ?, ?, ?)";
             ps = conn.getConexao().prepareStatement(query);
             ps.setFloat(1, medico.getCep());
             ps.setString(2, medico.getRuaDaCasa());
             ps.setFloat(3, medico.getNumDaCasa());
             ps.setString(4, medico.getCpf());
-            this.rsBoolean = ps.execute();
-
-            return rsBoolean;
-        }
-        catch(SQLException ex) {
-            ex.printStackTrace();
-        }
-
-        return rsBoolean;
-    }
-
-
-    // Metodo para editar (alteração) de um conveniado.
-    public Boolean editarConveniado(Conveniado conveniado) {
-        try {
-            String query;
-            query = "update table_conveniado set cpf = ?, nomeCompleto = ?, senha = ? where cpf = ?";
-            ps = conn.getConexao().prepareStatement(query);
-            ps.setString(1, conveniado.getCpf());
-            ps.setString(2, conveniado.getNomeCompleto());
-            ps.setString(3, conveniado.getSenha());
-            ps.setString(4, conveniado.getValidaCpf());
-
-            this.rsBoolean = ps.execute();
-
-            return rsBoolean;
-        }
-        catch (SQLException ex) {
-            ex.printStackTrace();
-        }
-
-        return rsBoolean;
-    }
-
-    // Metodo para editar (alteração), telefone de um conveniado
-    public Boolean editarTelefoneConveniado(Conveniado conveniado) {
-        try {
-            String query;
-            query = "update telefone_conveniado set telefone=?, table_conveniado_cpf=?";
-            ps = conn.getConexao().prepareStatement(query);
-            ps.setFloat(1, conveniado.getNumDeTelefone());
-            ps.setString(2, conveniado.getValidaCpf());
-            this.rsBoolean = ps.execute();
-
-            return rsBoolean;
-        }
-        catch(SQLException ex) {
-            ex.printStackTrace();
-        }
-
-        return rsBoolean;
-    }
-
-    // Metodo para editar (alteração), endereço de um conveniado
-    public Boolean editarEnderecoConveniado(Conveniado conveniado) {
-        try {
-            String query;
-            query = "update endereco_conveniado set cep = ?, rua=?, numero=? where table_conveniado_cpf=?";
-            ps = conn.getConexao().prepareStatement(query);
-            ps.setFloat(1, conveniado.getCep());
-            ps.setString(2, conveniado.getRuaDaCasa());
-            ps.setFloat(3, conveniado.getNumDaCasa());
-            ps.setString(4, conveniado.getValidaCpf());
-            this.rsBoolean = ps.execute();
-
-            return rsBoolean;
-        }
-        catch(SQLException ex) {
-            ex.printStackTrace();
-        }
-
-        return rsBoolean;
-    }
-    // Metodo para editar (alteração) de um medico.
-    public Boolean editarMedico(Medico medico) {
-        try {
-            String query;
-            query = "update table_registro_medico set cpf=?, nome_completo=?, area_atuante=?, senha=? where cpf=?";
-            ps = conn.getConexao().prepareStatement(query);
-            ps.setString(1, medico.getCpf());
-            ps.setString(2, medico.getNomeCompleto());
-            ps.setString(3, medico.getAreaAtuante());
-            ps.setString(4, medico.getSenha());
-            ps.setString(5, medico.getValidaCpf());
-
-            this.rsBoolean = ps.execute();
-
-            return rsBoolean;
-        }
-        catch(SQLException ex) {
-            ex.printStackTrace();
-        }
-
-        return rsBoolean;
-    }
-    // Metodo para editar (alteração), telefone de um medico.
-    public Boolean editarTelefoneMedico(Medico medico) {
-        try {
-            String query;
-            query = "update telefone_medico set telefone=? where table_registro_medico_cpf=?";
-            ps = conn.getConexao().prepareStatement(query);
-            ps.setFloat(1, medico.getNumDeTelefone());
-            ps.setString(2, medico.getValidaCpf());
-            this.rsBoolean = ps.execute();
-
-            return rsBoolean;
-        }
-        catch(SQLException ex) {
-            ex.printStackTrace();
-        }
-
-        return rsBoolean;
-    }
-    // Metodo para editar (alteração), Endereço de um medico.
-    public Boolean editarEnderecoMedico(Medico medico) {
-        try {
-            String query;
-            query = "update endereco_medico set cep=?, rua=?, numero=? where table_registro_medico_cpf=?";
-            ps = conn.getConexao().prepareStatement(query);
-            ps.setFloat(1, medico.getCep());
-            ps.setString(2, medico.getRuaDaCasa());
-            ps.setFloat(3, medico.getNumDaCasa());
-            ps.setString(4, medico.getValidaCpf());
+            ps.setInt(5, medico.getId());
             this.rsBoolean = ps.execute();
 
             return rsBoolean;
@@ -265,7 +173,7 @@ public class CadastroDAO {
     public Boolean buscarConveniado(Conveniado conveniado) {
         try {
             String query;
-            query = "select conveniado_ID from table_conveniado where cpf=? and senha=?";
+            query = "select conveniado_ID from table_registro_conveniado where cpf=? and senha=?";
 
             ps = conn.getConexao().prepareStatement(query);
             ps.setString(1, conveniado.getValidaCpf());
