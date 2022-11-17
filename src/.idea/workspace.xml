@@ -29,6 +29,10 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MigrationScriptOptions">
+    <option name="ignoreImplicitObjects" value="true" />
+    <option name="ignoreSourceCode" value="false" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -110,7 +114,7 @@
       <workItem from="1668301315567" duration="3213000" />
       <workItem from="1668348829732" duration="15665000" />
       <workItem from="1668371378024" duration="10160000" />
-      <workItem from="1668695941261" duration="15741000" />
+      <workItem from="1668695941261" duration="15777000" />
     </task>
     <servers />
   </component>
